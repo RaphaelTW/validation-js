@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-
     const form = document.getElementById("mainForm");
     const name = document.getElementById("name");
     const email = document.getElementById("email");
@@ -9,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
-        if (checkInput()) {
+        if (checkInputs()) {
             showModal();
         }
     });
@@ -38,26 +37,21 @@ document.addEventListener("DOMContentLoaded", function () {
         let isValid = true;
 
         validateField(name, name.value.trim() !== '', 'O nome não pode ficar em branco');
-
         validateField(email, isEmail(email.value.trim()), 'Não é um e-mail válido');
-
         validateField(phone, isPhone(phone.value.trim()), 'Não é um Telefone/Celular válido');
-
         validateField(password, password.value.trim().length >= 8, 'A senha deve conter pelo menos 8 caracteres');
-
         validateField(message, message.value.trim() !== '', 'A Mensagem não pode ficar em branco');
 
-        document.querySelector('.form-control').forEach((control) => {
+        document.querySelectorAll('.form-control').forEach((control) => {
             if (control.classList.contains('error')) {
                 isValid = false;
             }
         });
 
         return isValid;
-
     }
 
-    function validadeField(input, condition, errorMessage) {
+    function validateField(input, condition, errorMessage) {
         if (condition) {
             setSuccess(input);
         } else {
@@ -81,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function isEmail(email) {
-        return /^[a-zA-Z0-9._-]+@[a=zA-ZO-9.-]+\.[a-zA-Z]{2,6}$/.test(email);
+        return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(email);
     }
 
     function isPhone(phone) {
@@ -93,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.style.display = 'block';
 
         const closeBtn = document.querySelector('.close-button');
-        closeBtn.onClick = function () {
+        closeBtn.onclick = function () {
             modal.style.display = 'none';
         };
 
