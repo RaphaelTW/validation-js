@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" dir="ltr" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" />
+    <meta name="description" content="Raphael Laurentino" />
+
+    <title>Form Validation JavaScript</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/responsivo.css">
+</head>
+<body>
+
+    <div class="container">
+        <img src="./src/img/image-background.jpeg" alt="">
+
+        <form action="" id="mainForm" novalidate>
+            <h2>Formulário</h2>
+
+            <div class="form-control">
+                <label for="name">Nome</label>
+                <input type="text" id="name" placeholder="Coloque o seu nome" autocomplete="off" />
+                <i class="icon"></i>
+            </div>
+
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Coloque o seu e-mail" autocomplete="off" />
+                <i class="icon"></i>
+            </div>
+
+            <div class="form-control">
+                <label for="phone">Celular</label>
+                <input type="tel" id="phone" placeholder="Coloque o seu nome" autocomplete="off" />
+                <i class="icon"></i>
+            </div>
+
+            <div class="form-control">
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="Escolha uma Senha" autocomplete="off" />
+                <i class="icon"></i>
+            </div>
+
+            <div class="form-control">
+                <label for="message">Mensagem</label>
+                <textarea id="message" placeholder="Coloque a sua mensagem"></textarea>
+                <i class="icon"></i>
+            </div>
+
+            <button class="btn" type="reset">Limpar</button>
+            <button class="btn" type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <div id="sucessModal" class="modal">
+        <div class="modal-content">
+            <span class="close-butoon">&times;</span>
+            <h2>Sucesso!</h2>
+            <p>Seu formulário foi enviado com sucesso.</p>
+        </div>
+    </div>
+    
+    <script src="./src/js/index.js"></script>
+</body>
+</html> 

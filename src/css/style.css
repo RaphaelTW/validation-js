@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'M PLUS Code Latin', monospace;
+}
+
+body {
+    background-color: #763C64;
+    color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 20px;
+}
+
+.container {
+    background-color: #121004;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 920px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.container img {
+    width: 50%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.container form {
+    width: 50%;
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control input,
+.form-control textarea {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px;
+    border: 4px solid #763C64;
+    border-radius: 40px;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    background-color: #763C64;
+    color: azure;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-bottom: 4px;
+}
+
+button:hover {
+    background-color: #4e2140;
+}
+
+.modal {
+    display: none;
+}
