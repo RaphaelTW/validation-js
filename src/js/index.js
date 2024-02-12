@@ -72,4 +72,35 @@ document.addEventListener("DOMContentLoaded", function () {
         icon.className = 'icon fas fa-times-circle';
         input.placeholder = message;
     }
+
+    function setSuccess(input) {
+        const formControl = input.parentElement;
+        const icon = formControl.querySelector('.icon');
+        formControl.className = 'form-control success';
+        icon.className = 'icon fas fa-check-circle';
+    }
+
+    function isEmail(email) {
+        return /^[a-zA-Z0-9._-]+@[a=zA-ZO-9.-]+\.[a-zA-Z]{2,6}$/.test(email);
+    }
+
+    function isPhone(phone) {
+        return /^\+?(\d.*){3,}$/.test(phone);
+    }
+
+    function showModal() {
+        const modal = document.getElementById('successModal');
+        modal.style.display = 'block';
+
+        const closeBtn = document.querySelector('.close-button');
+        closeBtn.onClick = function () {
+            modal.style.display = 'none';
+        };
+
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+    }
 });
